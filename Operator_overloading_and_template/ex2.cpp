@@ -23,7 +23,7 @@ Matrix Matrix::operator*(const Matrix& rhs){
 	Matrix ans;
 	for(int i = 0; i < 3; ++i){
 		for(int j = 0; j < 3; ++j){
-			int temp;
+			int temp = 0;
 			for(int k = 0; k < 3; ++k){
 				temp += this->data[i][k] * rhs.data[k][j];
 			}
@@ -85,9 +85,9 @@ int main(){
 	/*******************
 	 * This program should output:
 	 * a * b:
-	 * 34 65 105
-	 * 184 254 354
-	 * 478 587 747
+	 * 34 31 40
+	 * 79 70 100
+	 * 124 109 160
 	 * 
 	 * a + b:
 	 * 6 5 12

@@ -6,9 +6,10 @@ int flip(int a){
 }
 
 char flip(char a){
-	if('a' <= a && a <= 'z' ||
-			'A' <= a && a <= 'Z'){
-		a ^= ' ';
+	if('a' <= a && a <= 'z'){
+		a = a - 'a' + 'A';
+	}else if('A' <= a && a <= 'Z'){
+		a = a - 'A' + 'a';
 	}
 	return a;
 }
